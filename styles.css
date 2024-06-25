@@ -1,0 +1,545 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* 
+img {
+    width: 50px;
+
+} */
+
+
+body {
+    background-color: rgb(0, 0, 0);
+    display: grid;
+    gap: 50px;
+    width: 100%;
+    height: auto;
+    padding: 50px;
+    color: rgb(78, 78, 78);
+    font-family: "Poppins", cursive;
+
+}
+
+.hero {
+    height: 55vh;
+    width: 70%;
+    margin: 0 auto;
+    background-color: #fff;
+    position: relative;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: none;
+    box-shadow: -4px 4px 6px 0px rgb(4, 15, 98);
+    display: grid;
+
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    width: 75%;
+    height: 12vh;
+    background-color: rgb(1, 1, 1);
+    top: 0;
+    right: 0;
+    z-index: 4;
+    border-bottom-left-radius: 20px;
+    box-shadow: 0px -10px 2px 10px #000000;
+
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    width: 5%;
+    height: auto;
+    background-color: #fff;
+    top: 12vh;
+    bottom: 0;
+    right: -4%;
+    z-index: 0;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 20px;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.hero-container .introduction {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    justify-content: space-between;
+    padding-top: 15vh;
+    padding-bottom: 50px;
+    align-items: center;
+    margin: 0 auto;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.introduction .intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.introduction h2 {
+    text-align: center;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.name {
+    font-size: 48px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 50px;
+    color: #000000;
+    font-family: 'Roboto';
+    letter-spacing: 2px;
+}
+
+.links {
+    display: flex;
+    width: 70%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+
+.links img {
+    width: 20px;
+    transition: all 3s ease-in-out linear;
+    box-shadow: 0px 35px 18px 0px rgb(0, 0, 0);
+
+}
+
+.links img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+
+}
+
+.hero-container .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+    margin-top: 18vh;
+    border-radius: 50px;
+    position: relative;
+    z-index: 10;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.image img {
+    position: relative;
+    z-index: 10;
+    vertical-align: middle;
+    min-width: 60%;
+    width: 90%;
+}
+
+
+
+.image::before,
+.image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 6px;
+}
+
+.image::before {
+    border: 2px solid;
+    border-color: #ad78f6;
+    animation: animate_before 8s ease-in-out infinite;
+}
+
+.image::after {
+    border: 2px solid;
+    border-color: #d20000c0;
+}
+
+.image::after,
+.image img {
+    animation: animate_after 8s ease-out infinite;
+}
+
+
+@keyframes animate_before {
+    0% {
+
+        border: none;
+    }
+
+    25% {
+        border-radius: 69% 31% 61% 39% / 42% 30% 70% 58%;
+    }
+
+    50% {
+        border-radius: 27% 73% 40% 60% / 31% 49% 51% 69%;
+    }
+
+    100% {
+        border-radius: 69% 31% 61% 39% / 42% 30% 70% 58%;
+    }
+
+}
+
+@keyframes animate_after {
+
+    0% {
+
+        border: none;
+    }
+
+
+    25% {
+        border-radius: 36% 64% 40% 60% / 31% 46% 54% 69%;
+    }
+
+    50% {
+        border-radius: 53% 47% 75% 25% / 47% 37% 63% 53%;
+    }
+
+    100% {
+        border-radius: 36% 64% 40% 60% / 31% 46% 54% 69%;
+    }
+
+}
+
+.timeline {
+    height: auto;
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+    z-index: 2;
+    background-color: rgba(27, 52, 193, 0.3);
+}
+
+.container {
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+    animation: movedown 1s linear forwards;
+    opacity: 0;
+}
+
+
+@keyframes movedown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translateY(0px);
+    }
+
+}
+
+.container:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.container:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.container:nth-child(3) {
+    animation-delay: 2s;
+}
+
+.container:nth-child(4) {
+    animation-delay: 3s;
+}
+
+.text-box {
+    padding: 20px 30px;
+    background-color: #fff;
+    position: relative;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.left-container {
+    left: 0;
+}
+
+.right-container {
+    left: 50%;
+}
+
+.container img {
+    position: absolute;
+    border-radius: 50%;
+    right: -20px;
+    top: 32px;
+    z-index: 10;
+    width: 50px;
+}
+
+.right-container img {
+    left: -30px;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background-color: #fff;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+    margin-left: -6px;
+    animation: moveline 5s linear forwards;
+}
+
+@keyframes moveline {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 100%;
+    }
+}
+
+#github,
+#node,
+#react {
+    background-color: #fff;
+    padding: 2px;
+}
+
+.timeline .goals {
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 10;
+    border: 2px solid black;
+    border-radius: 20px;
+    color: blue;
+    width: 25%;
+    margin: 0 auto;
+    background-color: #fff;
+    margin-bottom: 8px;
+
+    font-weight: 600;
+    font-family: 'Roboto';
+    font-size: 20px;
+    box-shadow: 0px 5px 5px 0px black;
+
+}
+
+
+.containe,
+.goals {
+    animation: movedown 1s linear forwards;
+
+}
+
+.text-box {
+    line-height: 30px;
+}
+
+.text-box h2 {
+    font-weight: 600;
+
+}
+
+.text-box p {
+    font-weight: 600;
+}
+
+.text-box small {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.left-container-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    right: -15px;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #fff;
+    z-index: 1;
+}
+
+.right-container-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    left: -15px;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #ff0000;
+    z-index: 1;
+}
+
+
+/* animation on scroll */
+
+h2,
+p,
+small,
+ul,
+li,
+.links {
+    animation: onScroll 3s ease-in-out both;
+}
+
+@keyframes onScroll {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+@media only screen and (max-width:1024px) {
+    body {
+        padding: 35px;
+    }
+
+    .hero {
+        width: 100%;
+    }
+
+    .hero-container .image {
+        width: 80%;
+    }
+
+    .links {
+        padding-bottom: 180px;
+    }
+
+    .hero::after {
+        height: 10vh;
+        width: 72%;
+    }
+
+    .hero::before {
+        top: 10vh;
+
+    }
+}
+
+@media only screen and (max-width:640px) {
+
+
+    body {
+        padding: 15px;
+    }
+
+    .hero {
+        height: auto;
+        margin-top: 30px;
+        width: 100%;
+
+    }
+
+    .hero::before {
+        display: none;
+    }
+
+    .hero::after {
+        height: 8vh;
+        width: 75%;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        padding-bottom: 10px;
+        height: auto;
+        gap: 0;
+    }
+
+    .hero-container .introduction {
+        width: 80%;
+        height: 180px;
+        margin-top: 20vh;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        justify-content: space-evenly;
+    }
+
+    .hero-container .image {
+        width: 70%;
+        /* height: 50%; */
+    }
+
+    .timeline .goals {
+        width: 45%;
+        font-size: small;
+        padding: 12px 5px;
+    }
+
+    .links {
+        padding-top: 50px;
+
+    }
+
+    .timeline {
+        margin: 50px auto;
+    }
+
+    .timeline::after {
+        left: 31px;
+    }
+
+    .container {
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 25px;
+    }
+
+    .text-box {
+        font-size: 13px;
+    }
+
+    .text-box small {
+        margin-bottom: 10px;
+    }
+
+    .container img {
+        left: 0;
+    }
+
+    .left-container-arrow {
+        left: -15px;
+        border-right: 15px solid #fff;
+        border-left: 0;
+    }
+
+    .right-container {
+        left: 0;
+    }
+}

@@ -228,6 +228,8 @@ body {
     background-color: rgba(27, 52, 193, 0.3);
     border-radius: 20px;
     padding-bottom: 30px;
+    box-shadow:2px 2px 0px 0px rgb(105, 105, 105);
+
 }
 
 .container {
@@ -274,6 +276,8 @@ body {
     position: relative;
     border-radius: 6px;
     font-size: 15px;
+    box-shadow: 5px 5px 1px 2px rgb(0, 0, 0);
+
 }
 
 .left-container {
@@ -336,7 +340,7 @@ body {
     z-index: 10;
     border: 2px solid black;
     border-radius: 20px;
-    color: blue;
+    color: rgb(8, 8, 66);
     width: 25%;
     margin: 0 auto;
     background-color: #fff;
@@ -350,7 +354,7 @@ body {
 }
 
 
-.containe,
+.container,
 .goals {
     animation: movedown 1s linear forwards;
 

@@ -119,7 +119,7 @@ body {
     padding-bottom: 5px;
 }
 
-.useful-links{
+.useful-links {
     font-size: 15px;
     font-weight: 600;
 }
@@ -461,7 +461,9 @@ p,
 small,
 ul,
 li,
-.links {
+.links,
+.UTC-container,
+.useful-links {
     animation: onScroll 3s ease-in-out both;
 }
 
@@ -487,6 +489,7 @@ li,
 
     .hero {
         width: 100%;
+
     }
 
     .UTC-container {
@@ -501,10 +504,10 @@ li,
     .link-container {
         width: 100%;
         padding-bottom: 20px;
-    
+
     }
 
-    .link-container a{
+    .link-container a {
         font-size: 12px;
         text-align: center;
     }
@@ -522,12 +525,31 @@ li,
         top: 10vh
     }
 
-    .timeline .goals{
+    .timeline .goals {
         width: 40%;
     }
 
-    .useful-links{
+    .useful-links {
         font-size: 14px;
+    }
+
+    .container {
+        width: 80%;
+
+    }
+
+    .right-container {
+        left: 20%;
+        margin-top: 20px;
+    }
+
+    .left-container {
+        margin-top: 20px;
+    }
+
+
+    .timeline::after {
+        display: none;
     }
 }
 
@@ -542,6 +564,7 @@ li,
         height: auto;
         margin-top: 30px;
         width: 100%;
+
 
     }
 
@@ -589,16 +612,20 @@ li,
 
     .link-container {
         padding-bottom: 10px;
-    
+
     }
 
-    .links{
+    .links {
         width: 50%;
-        padding-top: 10px;
+        padding-top: 30px;
     }
-    .useful-links{
+
+    .useful-links {
         font-size: 12px;
+        padding-top: 20px;
+        padding-bottom: 30px;
     }
+
 
 
     .timeline {
@@ -615,8 +642,13 @@ li,
         padding-right: 25px;
     }
 
-    .text-box {
-        font-size: 13px;
+    .timeline::after {
+        display: flex;
+    }
+
+    .text-box ul li {
+        font-size: 12px;
+        line-height: 1.8;
     }
 
     .text-box small {

@@ -13,11 +13,10 @@ function updateTime() {
 }
 
 
-
 setInterval(() => {
     const time = updateTime()
-    utcTime.innerText = `${time}`;
     utcDay.innerText = `${currentDay} -`
+    utcTime.innerText = `${time}`;
 }, 1000);
 
 

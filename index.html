@@ -14,15 +14,24 @@
 <body>
     <div class="hero">
         <div class="hero-container">
+
             <div class="introduction">
                 <div class="intro">
                     <h2><span class="name">Marvelous Udugbesi</span> <br />Fullstack Web developer and product testing
                         track
                     </h2>
                     <br />
-                    <small><span>Slack Name: </span><span>Marvy</span></small>
-                    <small><span>Slack Level: </span><span>1</span></small>
+                    <small><span class="slackName">Slack Name: </span><span
+                            data-testid="slackDisplayName">Marvy</span></small>
+                    <small><span class="email">Slack Email: </span><span
+                            data-testid="slackEmail">udugbesimarves@gmail.com</span></small>
                 </div>
+
+                <div class="UTC-container">
+                    <span data-testid="currentDay" class="UTC-day"></span>
+                    <span data-testid="currentTimeUTC" class="UTC-time"></span>
+                </div>
+
                 <div class="links">
                     <a href="https://github.com/MUdugbesi"><img src="./images/github.png" /></a>
                     <a href="https://www.linkedin.com/in/udugbesi-marvelous-2a51b11a5/"><img
@@ -30,13 +39,28 @@
                     <a href="#"><img src="./images/twitter.png" /></a>
                     <a href="#"><img src="./images/email.png" /></a>
                 </div>
+
+                <div>
+                    <p class="useful-links">Useful Links:</p>
+                    <div class="link-container">
+                        <a href="https://hng.tech/learn" data-testid="hngLink">HNG Learn</a>
+                        <a href="https://keyword.dog" data-testid="keywordLink">Keyword.dog</a>
+                        <a href="https://scrapeanyweb.site" data-testid="scrapeanywebLink">Scrapeanyweb</a>
+                    </div>
+                </div>
             </div>
 
             <div class="image">
-                <img src="./images/profile.jpeg" />
+                <img src="./images/IMG_PROFILE.JPG" data-testid="slackProfilePicture" />
             </div>
+
         </div>
+
     </div>
+    </div>
+
+
+
     <div class="timeline">
         <span class="goals">My Two years
             goals</span>
@@ -187,7 +211,7 @@
         </div>
 
         <div class="container left-container">
-            <img src="./images/github.png" alt="github" id="github" />
+            <img src="./images/github2.png" alt="github" id="github" />
             <div class="text-box">
                 <h2>Github</h2>
                 <div id="year1">
@@ -221,9 +245,8 @@
         </div>
 
         <div class="container right-container">
-            <img src="" alt="Tester" />
             <div class="text-box">
-                <h2>Product Tester</h2>
+                <h2>Product Testing</h2>
                 <div id="year">
                     <small>2024-2026</small>
                     <uls>
@@ -236,14 +259,14 @@
                         <li>Stay updated with the latest trends and tools in software testing.</li>
                         </ul>
                 </div>
-                <span class="right-container-arrow"></span>
+
             </div>
 
             <footer>
-                <div class="footer-links">
 
-                </div>
             </footer>
+
 </body>
+<script src="index.js"></script>
 
 </html>

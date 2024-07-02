@@ -65,6 +65,11 @@ body {
     border-bottom-right-radius: 20px;
 }
 
+.slackName,
+.email {
+    font-weight: bold;
+}
+
 .hero-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -108,17 +113,22 @@ body {
 
 .links {
     display: flex;
-    width: 70%;
+    width: 50%;
     justify-content: space-evenly;
     align-items: center;
-    padding-bottom: 50px;
+    padding-bottom: 5px;
 }
 
+.useful-links{
+    font-size: 15px;
+    font-weight: 600;
+}
 
 .links img {
-    width: 20px;
+    width: auto;
+    height: auto;
     transition: all 3s ease-in-out linear;
-    box-shadow: 0px 35px 18px 0px rgb(0, 0, 0);
+    /* box-shadow: 0px 35px 18px 0px rgb(0, 0, 0); */
 
 }
 
@@ -132,10 +142,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50%;
-    height: 50%;
+    width: auto;
+    height: auto;
     margin: 0 auto;
     margin-top: 18vh;
+    margin-bottom: 2vh;
     border-radius: 50px;
     position: relative;
     z-index: 10;
@@ -146,10 +157,9 @@ body {
     position: relative;
     z-index: 10;
     vertical-align: middle;
-    min-width: 60%;
-    width: 90%;
+    width: auto;
+    height: auto;
 }
-
 
 
 .image::before,
@@ -219,16 +229,51 @@ body {
 
 }
 
+.UTC-container {
+    width: 80%;
+    height: 40px;
+    border: 2px solid rgb(176, 175, 175);
+    border-radius: 50px;
+    box-shadow: 0px 5px 0px 0px rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.link-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.link-container a {
+    text-decoration: none;
+    color: #4805f1;
+    padding: 5px;
+    margin-right: 8px;
+    font-size: 12px;
+}
+
+.link-container a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: 600;
+    color: #000000;
+}
+
+
 .timeline {
     height: auto;
     position: relative;
     max-width: 1200px;
-    margin: 100px auto;
+    margin: 50px auto;
     z-index: 2;
     background-color: rgba(27, 52, 193, 0.3);
     border-radius: 20px;
     padding-bottom: 30px;
-    box-shadow:2px 2px 0px 0px rgb(105, 105, 105);
+    box-shadow: 2px 2px 0px 0px rgb(105, 105, 105);
 
 }
 
@@ -291,14 +336,19 @@ body {
 .container img {
     position: absolute;
     border-radius: 50%;
-    right: -20px;
-    top: 32px;
+    right: -18px;
     z-index: 10;
-    width: 50px;
+    width: auto;
+    height: auto;
+}
+
+.left-container img {
+    top: 32px;
 }
 
 .right-container img {
-    left: -30px;
+    top: 40px;
+    left: -25px;
 }
 
 .timeline::after {
@@ -336,12 +386,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
     z-index: 10;
     border: 2px solid black;
     border-radius: 20px;
     color: rgb(8, 8, 66);
-    width: 25%;
+    width: 20%;
     margin: 0 auto;
     background-color: #fff;
     margin-bottom: 8px;
@@ -439,12 +489,28 @@ li,
         width: 100%;
     }
 
-    .hero-container .image {
-        width: 80%;
+    .UTC-container {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .UTC-container span {
+        font-size: 13px;
+    }
+
+    .link-container {
+        width: 100%;
+        padding-bottom: 20px;
+    
+    }
+
+    .link-container a{
+        font-size: 12px;
+        text-align: center;
     }
 
     .links {
-        padding-bottom: 180px;
+        width: 100%;
     }
 
     .hero::after {
@@ -453,8 +519,15 @@ li,
     }
 
     .hero::before {
-        top: 10vh;
+        top: 10vh
+    }
 
+    .timeline .goals{
+        width: 40%;
+    }
+
+    .useful-links{
+        font-size: 14px;
     }
 }
 
@@ -497,21 +570,36 @@ li,
         justify-content: space-evenly;
     }
 
-    .hero-container .image {
-        width: 70%;
-        /* height: 50%; */
-    }
-
     .timeline .goals {
         width: 45%;
         font-size: small;
         padding: 12px 5px;
     }
 
-    .links {
-        padding-top: 50px;
-
+    .UTC-container {
+        width: 80%;
+        margin-top: 8px;
+        margin-bottom: 12px;
+        padding: 8px;
     }
+
+    .UTC-container span {
+        font-size: 10px;
+    }
+
+    .link-container {
+        padding-bottom: 10px;
+    
+    }
+
+    .links{
+        width: 50%;
+        padding-top: 10px;
+    }
+    .useful-links{
+        font-size: 12px;
+    }
+
 
     .timeline {
         margin: 50px auto;
@@ -536,7 +624,8 @@ li,
     }
 
     .container img {
-        left: 0;
+        left: 10px;
+        bottom: -10px;
     }
 
     .left-container-arrow {
